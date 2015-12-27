@@ -67,12 +67,25 @@ TreeNode * statement(void)
     case ID : t = assign_stmt(); break;
     case READ : t = read_stmt(); break;
     case WRITE : t = write_stmt(); break;
+    case FOR : t = for_stmt(); break;
     default : syntaxError("unexpected token -> ");
               printToken(token,tokenString);
               token = getToken();
               break;
   } /* end case */
   return t;
+}
+
+//for_stmt
+TreeNode * for_stmt(void)
+{ TreeNode * t = newStmtNode(ForK);
+  match(FOR);
+  if (t!=NULL) t->child[0] = exp();
+  match(THEN);
+  if (t!=NULL) t->child[1] = stmt_sequence();
+  match(ENDFOR);
+  return t;
+
 }
 
 TreeNode * if_stmt(void)

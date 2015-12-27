@@ -22,6 +22,8 @@ whitespace  [ \t]+
 
 %%
 
+"for"           {return FOR}
+"endfor"        {return ENDFOR}
 "if"            {return IF;}
 "then"          {return THEN;}
 "else"          {return ELSE;}
