@@ -25,7 +25,7 @@
 /* MAXRESERVED = the number of reserved words */
 #define MAXRESERVED 8
 
-typedef enum 
+typedef enum
     /* book-keeping tokens */
    {ENDFILE,ERROR,
     /* reserved words */
@@ -47,7 +47,7 @@ extern int lineno; /* source line number for listing */
 /**************************************************/
 
 typedef enum {StmtK,ExpK} NodeKind;
-typedef enum {IfK,RepeatK,AssignK,ReadK,WriteK} StmtKind;
+typedef enum {ForK,IfK,RepeatK,AssignK,ReadK,WriteK} StmtKind;//ForK adicionado
 typedef enum {OpK,ConstK,IdK} ExpKind;
 
 /* ExpType is used for type checking */
@@ -100,5 +100,5 @@ extern int TraceAnalyze;
 extern int TraceCode;
 
 /* Error = TRUE prevents further passes if an error occurs */
-extern int Error; 
+extern int Error;
 #endif

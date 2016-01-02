@@ -28,6 +28,9 @@ static void genStmt( TreeNode * tree)
   int loc;
   switch (tree->kind.stmt) {
 
+    //adicionar for aqui (?)
+    //geracao de codigo, too soon?
+
       case IfK :
          if (TraceCode) emitComment("-> if") ;
          p1 = tree->child[0] ;

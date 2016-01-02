@@ -58,7 +58,7 @@ static struct
     } reservedWords[MAXRESERVED]
    = {{"if",IF},{"then",THEN},{"else",ELSE},{"end",END},
       {"repeat",REPEAT},{"until",UNTIL},{"read",READ},
-      {"write",WRITE},{"for",FOR},{"endfor",ENDFOR}};//marca adicionado
+      {"write",WRITE},{"for",FOR},{"endfor",ENDFOR}};//marcas adicionadas
 
 /* lookup an identifier to see if it is a reserved word */
 /* uses linear search */
@@ -73,7 +73,7 @@ static TokenType reservedLookup (char * s)
 /****************************************/
 /* the primary function of the scanner  */
 /****************************************/
-/* function getToken returns the 
+/* function getToken returns the
  * next token in source file
  */
 TokenType getToken(void)
