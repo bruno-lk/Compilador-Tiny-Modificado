@@ -4,7 +4,7 @@
 # K. Louden 2/3/98
 #
 
-CC = bcc
+CC = gcc
 
 CFLAGS =
 

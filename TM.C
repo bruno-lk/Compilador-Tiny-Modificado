@@ -236,7 +236,7 @@ int readInstructions (void)
   lineNo = 0 ;
   while (! feof(pgm))
   { fgets( in_Line, LINESIZE-2, pgm  ) ;
-    inCol = 0 ; 
+    inCol = 0 ;
     lineNo++;
     lineLen = strlen(in_Line)-1 ;
     if (in_Line[lineLen]=='\n') in_Line[lineLen] = '\0' ;
@@ -252,9 +252,8 @@ int readInstructions (void)
       if (! getWord ())
         return error("Missing opcode", lineNo,loc);
       op = opHALT ;
-      while ((op < opRALim)
-             && (strncmp(opCodeTab[op], word, 4) != 0) )
-          op++ ;
+      while ((op < opRALim) && (strncmp(opCodeTab[op], word, 4) != 0) )
+          op++;
       if (strncmp(opCodeTab[op], word, 4) != 0)
           return error("Illegal opcode", lineNo,loc);
       switch ( opClass(op) )
@@ -268,7 +267,7 @@ int readInstructions (void)
         if ( (! getNum ()) || (num < 0) || (num >= NO_REGS) )
             return error("Bad second register", lineNo, loc);
         arg2 = num;
-        if ( ! skipCh(',')) 
+        if ( ! skipCh(','))
             return error("Missing comma", lineNo,loc);
         if ( (! getNum ()) || (num < 0) || (num >= NO_REGS) )
             return error("Bad third register", lineNo,loc);
@@ -364,7 +363,7 @@ STEPRESULT stepTM (void)
       while (! ok);
       break;
 
-    case opOUT :  
+    case opOUT :
       printf ("OUT instruction prints: %d\n", reg[r] ) ;
       break;
     case opADD :  reg[r] = reg[s] + reg[t] ;  break;

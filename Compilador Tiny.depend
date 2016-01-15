@@ -1,0 +1,85 @@
+# depslib dependency file v1.0
+1452815717 source:c:\users\bruno\desktop\compilador tiny\main.c
+	"globals.h"
+	"util.h"
+	"scan.h"
+	"parse.h"
+	"analyze.h"
+	"cgen.h"
+
+1452825582 c:\users\bruno\desktop\compilador tiny\globals.h
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+
+901990906 c:\users\bruno\desktop\compilador tiny\util.h
+
+901990904 c:\users\bruno\desktop\compilador tiny\scan.h
+
+901990904 c:\users\bruno\desktop\compilador tiny\parse.h
+
+901990898 c:\users\bruno\desktop\compilador tiny\analyze.h
+
+901990900 c:\users\bruno\desktop\compilador tiny\cgen.h
+
+901990930 source:c:\users\bruno\documents\! faculdade\compiladores\loucomp\analyze.c
+	"globals.h"
+	"symtab.h"
+	"analyze.h"
+
+1452825582 c:\users\bruno\documents\! faculdade\compiladores\loucomp\globals.h
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+
+901990904 c:\users\bruno\documents\! faculdade\compiladores\loucomp\symtab.h
+
+901990898 c:\users\bruno\documents\! faculdade\compiladores\loucomp\analyze.h
+
+1452886169 source:c:\users\bruno\documents\! faculdade\compiladores\loucomp\cgen.c
+	"globals.h"
+	"symtab.h"
+	"code.h"
+	"cgen.h"
+
+901990900 c:\users\bruno\documents\! faculdade\compiladores\loucomp\code.h
+
+901990900 c:\users\bruno\documents\! faculdade\compiladores\loucomp\cgen.h
+
+901990940 source:c:\users\bruno\documents\! faculdade\compiladores\loucomp\code.c
+	"globals.h"
+	"code.h"
+
+1452815717 source:c:\users\bruno\documents\! faculdade\compiladores\loucomp\main.c
+	"globals.h"
+	"util.h"
+	"scan.h"
+	"parse.h"
+	"analyze.h"
+	"cgen.h"
+
+901990906 c:\users\bruno\documents\! faculdade\compiladores\loucomp\util.h
+
+901990904 c:\users\bruno\documents\! faculdade\compiladores\loucomp\scan.h
+
+901990904 c:\users\bruno\documents\! faculdade\compiladores\loucomp\parse.h
+
+1452886244 source:c:\users\bruno\documents\! faculdade\compiladores\loucomp\parse.c
+	"globals.h"
+	"util.h"
+	"scan.h"
+	"parse.h"
+
+1452885836 source:c:\users\bruno\documents\! faculdade\compiladores\loucomp\scan.c
+	"globals.h"
+	"util.h"
+	"scan.h"
+
+901990946 source:c:\users\bruno\documents\! faculdade\compiladores\loucomp\symtab.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"symtab.h"
+
