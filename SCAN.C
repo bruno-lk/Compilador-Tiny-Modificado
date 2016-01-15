@@ -185,7 +185,7 @@ TokenType getToken(void)
          state = DONE;
          currentToken = ERROR;
          break;
-     }
+     }//end case
      if ((save) && (tokenStringIndex <= MAXTOKENLEN))
        tokenString[tokenStringIndex++] = (char) c;
      if (state == DONE)

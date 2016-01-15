@@ -6,7 +6,7 @@
 
 CC = bcc
 
-CFLAGS = 
+CFLAGS =
 
 OBJS = main.obj util.obj scan.obj parse.obj symtab.obj analyze.obj code.obj cgen.obj
 
