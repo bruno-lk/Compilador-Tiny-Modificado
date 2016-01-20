@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Compilador Tiny" />
+		<Option title="Compilador Tiny modificado" />
 		<Option makefile="MAKEFILE" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
@@ -12,6 +12,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option parameters="SAMPLE.TNY" />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
@@ -33,42 +34,34 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="ANALYZE.C">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="ANALYZE.H" />
-		<Unit filename="CGEN.C">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="CGEN.H" />
-		<Unit filename="CODE.C">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="CODE.H" />
+		<Unit filename="Compilador Tiny.cbp" />
+		<Unit filename="Compilador Tiny.depend" />
+		<Unit filename="Compilador Tiny.layout" />
 		<Unit filename="GLOBALS.H" />
 		<Unit filename="MAIN.C">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="PARSE.C">
-			<Option compilerVar="CC" />
-		</Unit>
+		<Unit filename="MAIN.o" />
+		<Unit filename="MAKEFILE" />
 		<Unit filename="PARSE.H" />
+		<Unit filename="README.DOS" />
+		<Unit filename="SAMPLE.TM" />
+		<Unit filename="SAMPLE.TNY" />
 		<Unit filename="SCAN.C">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="SCAN.H" />
-		<Unit filename="SYMTAB.C">
-			<Option compilerVar="CC" />
-		</Unit>
+		<Unit filename="SCAN.o" />
 		<Unit filename="SYMTAB.H" />
-		<Unit filename="TM.C">
-			<Option compilerVar="CC" />
-		</Unit>
+		<Unit filename="TINY.EXE" />
+		<Unit filename="TM.EXE" />
 		<Unit filename="UTIL.C">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="UTIL.H" />
-		<Unit filename="YACC/GLOBALS.H" />
 		<Extensions>
 			<code_completion />
 			<envvars />

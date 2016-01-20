@@ -52,7 +52,7 @@
 	"globals.h"
 	"code.h"
 
-1452815717 source:c:\users\bruno\documents\! faculdade\compiladores\loucomp\main.c
+1453224519 source:c:\users\bruno\documents\! faculdade\compiladores\loucomp\main.c
 	"globals.h"
 	"util.h"
 	"scan.h"
@@ -82,4 +82,8 @@
 	<stdlib.h>
 	<string.h>
 	"symtab.h"
+
+1453221863 source:c:\users\bruno\documents\! faculdade\compiladores\loucomp\util.c
+	"globals.h"
+	"util.h"
 

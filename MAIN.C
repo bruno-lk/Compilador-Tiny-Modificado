@@ -1,9 +1,9 @@
-/****************************************************/
+//****************************************************/
 /* File: main.c                                     */
 /* Main program for TINY compiler                   */
 /* Compiler Construction: Principles and Practice   */
 /* Kenneth C. Louden                                */
-/****************************************************/
+//****************************************************/
 
 #include "globals.h"
 
@@ -37,15 +37,15 @@ FILE * listing;
 FILE * code;
 
 /* allocate and set tracing flags */
-int EchoSource = FALSE;
-int TraceScan = FALSE;
+int EchoSource = TRUE;
+int TraceScan = TRUE;
 int TraceParse = FALSE;
 int TraceAnalyze = FALSE;
 int TraceCode = FALSE;
 
 int Error = FALSE;
 
-main( int argc, char * argv[] )
+int main( int argc, char * argv[] )
 { TreeNode * syntaxTree;
   char pgm[120]; /* source code file name */
   if (argc != 2)
