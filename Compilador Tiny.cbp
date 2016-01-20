@@ -34,30 +34,14 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="ANALYZE.H" />
-		<Unit filename="CGEN.H" />
-		<Unit filename="CODE.H" />
-		<Unit filename="Compilador Tiny.cbp" />
-		<Unit filename="Compilador Tiny.depend" />
-		<Unit filename="Compilador Tiny.layout" />
 		<Unit filename="GLOBALS.H" />
 		<Unit filename="MAIN.C">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="MAIN.o" />
-		<Unit filename="MAKEFILE" />
-		<Unit filename="PARSE.H" />
-		<Unit filename="README.DOS" />
-		<Unit filename="SAMPLE.TM" />
-		<Unit filename="SAMPLE.TNY" />
 		<Unit filename="SCAN.C">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="SCAN.H" />
-		<Unit filename="SCAN.o" />
-		<Unit filename="SYMTAB.H" />
-		<Unit filename="TINY.EXE" />
-		<Unit filename="TM.EXE" />
 		<Unit filename="UTIL.C">
 			<Option compilerVar="CC" />
 		</Unit>

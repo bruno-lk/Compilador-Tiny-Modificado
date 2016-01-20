@@ -28,7 +28,7 @@ static void genStmt( TreeNode * tree)
   int loc;
   switch (tree->kind.stmt) {
 
-    //adicionar for aqui (?)
+    //adicionar ForK aqui (?)
     //geracao de codigo, too soon?
 
       case IfK :

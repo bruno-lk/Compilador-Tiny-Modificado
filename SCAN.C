@@ -133,9 +133,9 @@ TokenType getToken(void)
              case ')':
                currentToken = RPAREN;
                break;
-             case ';':
-               currentToken = SEMI;
-               break;
+             /*case ';':
+               currentToken = SEMI; //ponto e virgula retiradio (tranformado em comentario)
+               break;*/
              default:
                currentToken = ERROR;
                break;
