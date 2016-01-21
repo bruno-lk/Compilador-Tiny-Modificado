@@ -138,6 +138,7 @@ TreeNode * write_stmt(void)
   return t;
 }
 
+//alterar para incluir FOR
 TreeNode * exp(void)
 { TreeNode * t = simple_exp();
   if ((token==LT)||(token==EQ)) {

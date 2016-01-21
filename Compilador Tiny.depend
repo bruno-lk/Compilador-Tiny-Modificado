@@ -28,7 +28,7 @@
 	"symtab.h"
 	"analyze.h"
 
-1453298196 c:\users\bruno\documents\! faculdade\compiladores\loucomp\globals.h
+1453348364 c:\users\bruno\documents\! faculdade\compiladores\loucomp\globals.h
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -72,7 +72,7 @@
 	"scan.h"
 	"parse.h"
 
-1453298318 source:c:\users\bruno\documents\! faculdade\compiladores\loucomp\scan.c
+1453346862 source:c:\users\bruno\documents\! faculdade\compiladores\loucomp\scan.c
 	"globals.h"
 	"util.h"
 	"scan.h"
@@ -83,7 +83,7 @@
 	<string.h>
 	"symtab.h"
 
-1453298318 source:c:\users\bruno\documents\! faculdade\compiladores\loucomp\util.c
+1453346862 source:c:\users\bruno\documents\! faculdade\compiladores\loucomp\util.c
 	"globals.h"
 	"util.h"
 

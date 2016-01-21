@@ -23,13 +23,13 @@
 #endif
 
 /* MAXRESERVED = the number of reserved words */
-#define MAXRESERVED 10 //aumantado de 8 para 10 com "for" e "endfor"
+#define MAXRESERVED 10 //altereado de 8 para 10 com "for" e "endfor"
 
 typedef enum
     /* book-keeping tokens */
    {ENDFILE,ERROR,
     /* reserved words */
-    IF,THEN,ELSE,END,REPEAT,UNTIL,READ,WRITE,FOR,ENDFOR,//adicionado for e endfor
+    IF,THEN,ELSE,ENDIF,REPEAT,UNTIL,READ,WRITE,FOR,ENDFOR,//adicionado for e endfor
     /* multicharacter tokens */
     ID,NUM,
     /* special symbols */

@@ -56,7 +56,7 @@ static struct
     { char* str;
       TokenType tok;
     } reservedWords[MAXRESERVED]
-   = {{"if",IF},{"then",THEN},{"else",ELSE},{"end",END},
+   = {{"if",IF},{"then",THEN},{"else",ELSE},{"endif",ENDIF},
       {"repeat",REPEAT},{"until",UNTIL},{"read",READ},
       {"write",WRITE},{"for",FOR},{"endfor",ENDFOR}};//marcas adicionadas
 
@@ -96,7 +96,7 @@ TokenType getToken(void)
            state = INID;
          else if (c == ':')
            state = INASSIGN;
-         else if ((c == ' ') || (c == '\t') || (c == '\n'))
+         else if ((c == ' ') || (c == '\t') || (c == '\n')) //talvez necessario na exclusao do ';'
            save = FALSE;
          else if (c == '{')
          { save = FALSE;
@@ -133,9 +133,11 @@ TokenType getToken(void)
              case ')':
                currentToken = RPAREN;
                break;
-             /*case ';':
+            /*
+             case ';':
                currentToken = SEMI; //ponto e virgula retiradio (tranformado em comentario)
-               break;*/
+               break;
+            */
              default:
                currentToken = ERROR;
                break;
@@ -171,7 +173,7 @@ TokenType getToken(void)
          }
          break;
        case INID:
-         if (!isalpha(c))
+         if (!isalnum(c) && c!='_')
          { /* backup in the input */
            ungetNextChar();
            save = FALSE;
