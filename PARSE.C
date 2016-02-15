@@ -20,7 +20,7 @@ static TreeNode * repeat_stmt(void);
 static TreeNode * assign_stmt(void);
 static TreeNode * read_stmt(void);
 static TreeNode * write_stmt(void);
-static TreeNode * for_stmt(void); //marca adicionada
+static TreeNode * for_stmt(void); //declaração adicionada
 static TreeNode * exp(void);
 static TreeNode * simple_exp(void);
 static TreeNode * term(void);
@@ -44,10 +44,10 @@ static void match(TokenType expected)
 TreeNode * stmt_sequence(void)
 { TreeNode * t = statement();
   TreeNode * p = t;
-  while ((token!=ENDFILE) && (token!=END) &&
-         (token!=ELSE) && (token!=UNTIL))
+  while ((token!=ENDFILE) && (token!=ENDFOR) &&
+         (token!=ELSE) && (token!=UNTIL) && (token!=ENDIF))
   { TreeNode * q;
-    match(SEMI);
+    //match(SEMI); pode dar merda
     q = statement();
     if (q!=NULL) {
       if (t==NULL) t = p = q;
@@ -81,9 +81,14 @@ TreeNode * statement(void)
 TreeNode * for_stmt(void)
 { TreeNode * t = newStmtNode(ForK);
   match(FOR);
+  match(LPAREN);
   if (t!=NULL) t->child[0] = exp();
-  match(THEN);
-  if (t!=NULL) t->child[1] = stmt_sequence();
+  match(COMMA);
+  if (t!=NULL) t->child[1] = exp();
+  match(COMMA);
+  if (t!=NULL) t->child[2] = exp();
+  match(RPAREN);
+  if (t!=NULL) t->child[3] = stmt_sequence();
   match(ENDFOR);
   return t;
 
@@ -99,7 +104,7 @@ TreeNode * if_stmt(void)
     match(ELSE);
     if (t!=NULL) t->child[2] = stmt_sequence();
   }
-  match(END);
+  match(ENDIF);
   return t;
 }
 
@@ -138,7 +143,7 @@ TreeNode * write_stmt(void)
   return t;
 }
 
-//alterar para incluir FOR
+//talvez precise alterar para incluir FOR
 TreeNode * exp(void)
 { TreeNode * t = simple_exp();
   if ((token==LT)||(token==EQ)) {

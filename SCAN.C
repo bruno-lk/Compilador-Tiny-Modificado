@@ -133,6 +133,9 @@ TokenType getToken(void)
              case ')':
                currentToken = RPAREN;
                break;
+             case ',': // marca adicionada
+                currentToken = COMMA;
+                break;
             /*
              case ';':
                currentToken = SEMI; //ponto e virgula retiradio (tranformado em comentario)

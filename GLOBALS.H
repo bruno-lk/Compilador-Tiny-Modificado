@@ -33,7 +33,7 @@ typedef enum
     /* multicharacter tokens */
     ID,NUM,
     /* special symbols */
-    ASSIGN,EQ,LT,PLUS,MINUS,TIMES,OVER,LPAREN,RPAREN,SEMI
+    ASSIGN,EQ,LT,PLUS,MINUS,TIMES,OVER,LPAREN,RPAREN,COMMA//,SEMI // marca vigula adicionada
    } TokenType;
 
 extern FILE* source; /* source code text file */
@@ -53,7 +53,7 @@ typedef enum {OpK,ConstK,IdK} ExpKind;
 /* ExpType is used for type checking */
 typedef enum {Void,Integer,Boolean} ExpType;
 
-#define MAXCHILDREN 3
+#define MAXCHILDREN 4
 
 typedef struct treeNode
    { struct treeNode * child[MAXCHILDREN];

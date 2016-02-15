@@ -38,6 +38,10 @@
 		<Unit filename="MAIN.C">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="PARSE.C">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="PARSE.H" />
 		<Unit filename="SCAN.C">
 			<Option compilerVar="CC" />
 		</Unit>
