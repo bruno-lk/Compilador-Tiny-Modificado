@@ -23,13 +23,10 @@ static void cGen (TreeNode * tree);
 
 /* Procedure genStmt generates code at a statement node */
 static void genStmt( TreeNode * tree)
-{ TreeNode * p1, * p2, * p3;
+{ TreeNode * p1, * p2, * p3, *p4;//p4 adicionado para o ForK
   int savedLoc1,savedLoc2,currentLoc;
   int loc;
   switch (tree->kind.stmt) {
-
-    //adicionar ForK aqui (?)
-    //geracao de codigo, too soon?
 
       case IfK :
          if (TraceCode) emitComment("-> if") ;
@@ -70,6 +67,27 @@ static void genStmt( TreeNode * tree)
          emitRM_Abs("JEQ",ac,savedLoc1,"repeat: jmp back to body");
          if (TraceCode)  emitComment("<- repeat") ;
          break; /* repeat */
+
+      //ForK vai ser semelhante ao RepeatK
+      case ForK:
+        if (TraceCode) emitComment("-> for");
+        p1 = tree->child[0];
+        p2 = tree->child[1];
+        p3 = tree->child[2];
+        p4 = tree->child[3];
+        savedLoc1 = emitSkip(0);
+
+        emitComment("for: salto para o corpo volta aqui (?)");
+        //gera codigo para as condicoes/expressoes
+         cGen(p1);
+         cGen(p2);
+         cGen(p3);
+         //gera codigo para o corpo
+         cGen(p4);
+
+         emitRM_Abs("JEQ",ac,savedLoc1,"for: salto de volta para o corpo");
+         if (TraceCode)  emitComment("<- for") ;
+         break; /* for */
 
       case AssignK:
          if (TraceCode) emitComment("-> assign") ;

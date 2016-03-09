@@ -34,6 +34,14 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="CGEN.C">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="CGEN.H" />
+		<Unit filename="CODE.C">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="CODE.H" />
 		<Unit filename="GLOBALS.H" />
 		<Unit filename="MAIN.C">
 			<Option compilerVar="CC" />
@@ -42,10 +50,16 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="PARSE.H" />
+		<Unit filename="SAMPLE.TM" />
+		<Unit filename="SAMPLE.TNY" />
 		<Unit filename="SCAN.C">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="SCAN.H" />
+		<Unit filename="SYMTAB.C">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SYMTAB.H" />
 		<Unit filename="UTIL.C">
 			<Option compilerVar="CC" />
 		</Unit>

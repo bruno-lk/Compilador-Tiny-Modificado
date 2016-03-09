@@ -1,16 +1,6 @@
-read x
-read y
-read z
 
-for(x,y,z)
+for(y,5,10)
 	write x
 endfor
 
-if 0 < x then { don't compute if x <= 0 }
-  fact := 1
-  repeat
-    fact := fact * x
-    x := x - 1
-  until x = 0
-  write fact  { output factorial of x }
-endif
+x := x - 1
