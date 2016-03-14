@@ -23,7 +23,7 @@ static void cGen (TreeNode * tree);
 
 /* Procedure genStmt generates code at a statement node */
 static void genStmt( TreeNode * tree)
-{ TreeNode * p1, * p2, * p3, *p4;//p4 adicionado para o ForK
+{ TreeNode * p1, * p2, * p3, *p4; //p4 adicionado para o ForK
   int savedLoc1,savedLoc2,currentLoc;
   int loc;
   switch (tree->kind.stmt) {

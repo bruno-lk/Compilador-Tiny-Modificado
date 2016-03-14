@@ -1,5 +1,10 @@
+read x
 
-for(y,5,10)
+if x < 100 then
+    write x
+endif
+
+for(y,1,10)
 	write x
 endfor
 

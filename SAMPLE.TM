@@ -1,42 +1,66 @@
-  0:     LD  6,0(0) 
-  1:     ST  0,0(0) 
-  2:     IN  0,0,0 
-  3:     ST  0,0(5) 
-  4:    LDC  0,0(0) 
-  5:     ST  0,0(6) 
-  6:     LD  0,0(5) 
-  7:     LD  1,0(6) 
-  8:    SUB  0,1,0 
-  9:    JLT  0,2(7) 
- 10:    LDC  0,0(0) 
- 11:    LDA  7,1(7) 
- 12:    LDC  0,1(0) 
- 14:    LDC  0,1(0) 
- 15:     ST  0,1(5) 
- 16:     LD  0,1(5) 
- 17:     ST  0,0(6) 
- 18:     LD  0,0(5) 
- 19:     LD  1,0(6) 
- 20:    MUL  0,1,0 
- 21:     ST  0,1(5) 
- 22:     LD  0,0(5) 
- 23:     ST  0,0(6) 
- 24:    LDC  0,1(0) 
- 25:     LD  1,0(6) 
- 26:    SUB  0,1,0 
- 27:     ST  0,0(5) 
- 28:     LD  0,0(5) 
- 29:     ST  0,0(6) 
- 30:    LDC  0,0(0) 
- 31:     LD  1,0(6) 
- 32:    SUB  0,1,0 
- 33:    JEQ  0,2(7) 
- 34:    LDC  0,0(0) 
- 35:    LDA  7,1(7) 
- 36:    LDC  0,1(0) 
- 37:    JEQ  0,-22(7) 
- 38:     LD  0,1(5) 
- 39:    OUT  0,0,0 
- 13:    JEQ  0,27(7) 
- 40:    LDA  7,0(7) 
- 41:   HALT  0,0,0 
+* TINY Compilation to TM Code
+* File: SAMPLE.TM
+* Standard prelude:
+  0:     LD  6,0(0) 	load maxaddress from location 0
+  1:     ST  0,0(0) 	clear location 0
+* End of standard prelude.
+  2:     IN  0,0,0 	read integer value
+  3:     ST  0,0(5) 	read: store value
+* -> if
+* -> Op
+* -> Id
+  4:     LD  0,0(5) 	load id value
+* <- Id
+  5:     ST  0,0(6) 	op: push left
+* -> Const
+  6:    LDC  0,100(0) 	load const
+* <- Const
+  7:     LD  1,0(6) 	op: load left
+  8:    SUB  0,1,0 	op <
+  9:    JLT  0,2(7) 	br if true
+ 10:    LDC  0,0(0) 	false case
+ 11:    LDA  7,1(7) 	unconditional jmp
+ 12:    LDC  0,1(0) 	true case
+* <- Op
+* if: jump to else belongs here
+* -> Id
+ 14:     LD  0,0(5) 	load id value
+* <- Id
+ 15:    OUT  0,0,0 	write ac
+* if: jump to end belongs here
+ 13:    JEQ  0,3(7) 	if: jmp to else
+ 16:    LDA  7,0(7) 	jmp to end
+* <- if
+* -> for
+* for: salto para o corpo volta aqui (?)
+* -> Id
+ 17:     LD  0,1(5) 	load id value
+* <- Id
+* -> Const
+ 18:    LDC  0,1(0) 	load const
+* <- Const
+* -> Const
+ 19:    LDC  0,10(0) 	load const
+* <- Const
+* -> Id
+ 20:     LD  0,0(5) 	load id value
+* <- Id
+ 21:    OUT  0,0,0 	write ac
+ 22:    JEQ  0,-6(7) 	for: salto de volta para o corpo
+* <- for
+* -> assign
+* -> Op
+* -> Id
+ 23:     LD  0,0(5) 	load id value
+* <- Id
+ 24:     ST  0,0(6) 	op: push left
+* -> Const
+ 25:    LDC  0,1(0) 	load const
+* <- Const
+ 26:     LD  1,0(6) 	op: load left
+ 27:    SUB  0,1,0 	op -
+* <- Op
+ 28:     ST  0,0(5) 	assign: store value
+* <- assign
+* End of execution.
+ 29:   HALT  0,0,0 	
