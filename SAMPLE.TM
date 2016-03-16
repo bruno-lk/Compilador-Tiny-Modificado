@@ -32,7 +32,7 @@
  16:    LDA  7,0(7) 	jmp to end
 * <- if
 * -> for
-* for: salto para o corpo volta aqui (?)
+* for: salto para o corpo aqui
 * -> Id
  17:     LD  0,1(5) 	load id value
 * <- Id

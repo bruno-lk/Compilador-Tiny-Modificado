@@ -38,7 +38,7 @@
 
 901990898 c:\users\bruno\documents\! faculdade\compiladores\loucomp\analyze.h
 
-1452886169 source:c:\users\bruno\documents\! faculdade\compiladores\loucomp\cgen.c
+1457815992 source:c:\users\bruno\documents\! faculdade\compiladores\loucomp\cgen.c
 	"globals.h"
 	"symtab.h"
 	"code.h"
@@ -52,7 +52,7 @@
 	"globals.h"
 	"code.h"
 
-1455479922 source:c:\users\bruno\documents\! faculdade\compiladores\loucomp\main.c
+1457915637 source:c:\users\bruno\documents\! faculdade\compiladores\loucomp\main.c
 	"globals.h"
 	"util.h"
 	"scan.h"
@@ -66,7 +66,7 @@
 
 901990904 c:\users\bruno\documents\! faculdade\compiladores\loucomp\parse.h
 
-1455557685 source:c:\users\bruno\documents\! faculdade\compiladores\loucomp\parse.c
+1455560334 source:c:\users\bruno\documents\! faculdade\compiladores\loucomp\parse.c
 	"globals.h"
 	"util.h"
 	"scan.h"

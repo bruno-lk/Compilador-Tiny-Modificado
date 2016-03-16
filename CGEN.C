@@ -75,19 +75,20 @@ static void genStmt( TreeNode * tree)
         p2 = tree->child[1];
         p3 = tree->child[2];
         p4 = tree->child[3];
-        savedLoc1 = emitSkip(0);
 
-        emitComment("for: salto para o corpo volta aqui (?)");
         //gera codigo para as condicoes/expressoes
-         cGen(p1);
-         cGen(p2);
-         cGen(p3);
-         //gera codigo para o corpo
-         cGen(p4);
+        savedLoc1 = emitSkip(0);
+        emitComment("for: salto para o corpo aqui");
+        cGen(p1);
+        cGen(p2);
+        cGen(p3);
 
-         emitRM_Abs("JEQ",ac,savedLoc1,"for: salto de volta para o corpo");
-         if (TraceCode)  emitComment("<- for") ;
-         break; /* for */
+        //gera codigo para o corpo
+        cGen(p4);
+        emitRM_Abs("JEQ",ac,savedLoc1,"for: salto de volta para o corpo");
+
+        if (TraceCode)  emitComment("<- for") ;
+        break; /* for */
 
       case AssignK:
          if (TraceCode) emitComment("-> assign") ;
