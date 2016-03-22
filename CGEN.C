@@ -84,8 +84,9 @@ static void genStmt( TreeNode * tree)
         cGen(p3);
 
         //gera codigo para o corpo
+        savedLoc2 = emitSkip(0);
         cGen(p4);
-        emitRM_Abs("JEQ",ac,savedLoc1,"for: salto de volta para o corpo");
+        emitRM_Abs("JEQ",ac,savedLoc2,"for: salto de volta para o corpo");
 
         if (TraceCode)  emitComment("<- for") ;
         break; /* for */
